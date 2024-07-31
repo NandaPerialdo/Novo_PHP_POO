@@ -1,5 +1,5 @@
 <?php
-    namespace PHP\Modelo;
+    namespace Projeto\PHP\Modelo;
 
     class Endereco{
         private string $logradouro;
@@ -13,7 +13,7 @@
 
         //metodo construtor
 
-        public function __construct(string $logradouro,
+        function __construct(string $logradouro,
         int $numero,
         string $bairro,
         string $cidade,
@@ -35,18 +35,18 @@
         //metodos de acesso (antigos GET e SET)
 
         //GET
-        public function __get(string $nome){
+        function __get(string $nome){
             return $nome;
         }//fim do GET "genérico"
 
         //SET
-        public function __set(string $nome, string $valor){
+        function __set(string $nome, string $valor){
             $this->nome = $valor;
         }//fim do SET "genérico"
 
         //metodo pra imprimir
 
-        public function imprimir():string{
+        function imprimir():string{
             return "<br>Logradouro: ".$this->logradouro.
             "<br>Número: ".$this->numero.
             "<br>Bairro: ".$this->bairro.

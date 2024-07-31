@@ -1,39 +1,23 @@
 <?php
-    namespace PHP\Modelo;
+    namespace Projeto\PHP\Modelo;
 
-    require_once('Endereco.php');//importando a classe endereco
+    require_once('Endereco.php');
+    require_once('Pessoa.php');
+
+    use Projeto\PHP\Modelo\Endereco;
+    use Projeto\PHP\Modelo\Pessoa;
 
     class Cliente extends Pessoa{
-        protected string $login;
-        protected int $senha;
+        protected $valorTotal;
 
-        //metodo construtor
-        public function __construct(string $cpf, 
-        string $nome,
-        string $telefone,
-        string $dtNasc,
-        Endereco $endereco)
-        {
-            parent::__construct($cpf,$nome,$telefone, $dtNasc, $endereco);
-            $this->login = $login;
-            $this->senha = $senha;
-        }//fim do construtor
+        function __construct(string $cpf, string $nome, string $telefone, string $dtNascimento, Endereco $endereco, float $valorTotal){
+            parent::__construct($cpf,$nome,$telefone,$dtNascimento,$endereco);
+            $this->valorTotal = $valorTotal;
+        }//fim do método
 
-        public function __get(string $nome){
-            return $this->nome;
-        }//fim do get
+        function imprimir():string{
+            return parent::imprimir()."<br>".$this->valorTotal;
+        }
 
-        public function __set(string $nomeVariavel,string $valor):void
-        {
-            $this->nomeVariavel = $valor;
-        }//fim do set
-
-        public function imprimir():string
-        {
-            return parent::imprimir().
-                   "<br>Login: ".$this->login.
-                   "<br>Senha: ".$this->senha;
-        }//fim do imprimir
-
-    }//fim da classe
+    }//fim do cliente
 ?>

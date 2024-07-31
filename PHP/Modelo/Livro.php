@@ -1,5 +1,5 @@
 <?php
-    namespace PHP\Modelo;
+    namespace Projeto\PHP\Modelo;
 
     class Livro{
         private int $isbn;

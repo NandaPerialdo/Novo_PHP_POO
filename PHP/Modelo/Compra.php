@@ -1,10 +1,12 @@
 <?php
-    namespace PHP\Modelo;//definir local do projeto
+    namespace Projeto\PHP\Modelo;//definir local do projeto
 
     //importando a classes
     require_once('Livro.php');
-    require_once('Cliente.php');
-    require_once('Funcionario.php');
+
+    use Projeto\PHP\Modelo\Livro;
+    use Projeto\PHP\Modelo\Heranca\Cliente;
+    use Projeto\PHP\Modelo\Heranca\Funcionario;
 
     class Compra{
         private int $numCartao;
@@ -30,8 +32,7 @@
         }//fim do set
 
         public function imprimir():string{
-            return parent::imprimir().
-            "<br>Numero do Cartao: ".$this->numCartao.
+            return "<br>Numero do Cartao: ".$this->numCartao.
             "<br>Valor Total da Compra: ".$this->valorTotal;
         }//fim do imprimir
 

@@ -1,42 +1,42 @@
 <?php
-    namespace PHP\Modelo;
+    namespace Projeto\PHP\Modelo;
 
-    require_once('Endereco.php'); //importando a classe endereço
+    require_once('Endereco.php');
+
+    use Projeto\PHP\Modelo\Endereco;
 
     class Pessoa{
-        //declarando variaveis
-        protected string $cpf;
-        protected string $nome;
-        protected string $telefone;
-        protected string $dtNasc;
-        protected Endereco $endereco;
+        public string $cpf;
+        public string $nome;
+        public string $telefone;
+        public string $dtNascimento;
+        public Endereco $endereco;
 
 
-        //metodo construtor
-        public function __construct(string $cpf, string $nome, string $telefone, string $dtNasc, Endereco $endereco){
+        function __construct(string $cpf, string $nome, string $telefone, string $dtNascimento, Endereco $endereco){
             $this->cpf = $cpf;
             $this->nome = $nome;
             $this->telefone = $telefone;
-            $this->dtNasc = $dsNasc;
             $this->endereco = $endereco;
-        }//fim do construtor
+            $this->dtNascimento = $dtNascimento;
+        }//fim do método
 
-        //metodos get e set
-        public function __get(string $nome){
+        function __get(string $nome):string{
             return $this->nome;
-        }//fim do get "genérico"
+        }//fim do método
 
-        public function __set(string $campo, string $valor):void{
+        function __set(string $campo, string $valor):void{
             $this->campo = $valor;
-        }//fim do set "genérico"
+        }//fim do método
 
-        //metodo pra imprimir na tela
-        public function imprimir():string
-        {
+        function imprimir():string{
             return "<br>CPF: ".$this->cpf.
                    "<br>Nome: ".$this->nome.
                    "<br>Telefone: ".$this->telefone.
-                   "<br>Data de Nascimento: ".$this->dtNasc;
+                   "<br>Data de Nascimento: ".$this->dtNascimento;
         }//fim do método 
+
+
+
     }//fim da classe
 ?>
