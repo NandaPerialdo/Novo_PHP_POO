@@ -3,7 +3,7 @@
 
     class Livro{
         private int $isbn;
-        private string $titulo;
+        public string $titulo;
         private string $autor;
         private float $valor;
         private int $quantidade;
@@ -25,9 +25,18 @@
 
         //metodos de acesso GET e SET
 
-        public function __get(string $texto){
-            return $texto;
-        }//fim do get "generico"
+        function retornarTitulo():string{
+            return $this->titulo;
+        }
+
+        function retornarValor():string{
+            return $this->valor;
+        }
+
+        function __get(string $name):string{
+            return $this->name;
+        }
+
 
         public function __set(string $texto, string $valor):void{
             $this->nome = $valor;
@@ -37,7 +46,7 @@
             return "<br>ISBN: ".$this->isbn.
                  "<br>Título: ".$this->titulo.
                  "<br>Autor: ".$this->autor.
-                 "<br>Valor: ".$this->valor.
+                 "<br>Valor: R$ ".$this->valor.
                  "<br>Quantidade: ".$this->quantidade;
         }//fim do método
 

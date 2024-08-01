@@ -9,6 +9,7 @@
     require_once('Livro.php');
     require_once('Reserva.php');
     require_once('Pessoa.php');
+    require_once('Funcionario.php');
 
     use Projeto\PHP\Modelo\Pessoa;
     use Projeto\PHP\Modelo\Cliente;
@@ -22,32 +23,33 @@
     'Brasil','94326-678');
 
     $enderecoFuncionario = new Endereco ('Rua Amoras',
-    23,'Jardim das Frutas','Sao Caetano','SP','SP',
+    22,'Jardim das Frutas','Sao Caetano','SP','SP',
     'Brasil','94326-777');
 
-    //$person1 = new Pessoa('123','Allan','1213','29/02/1999',$enderecoCLiente);
-   //echo $person1->imprimir();
-    //echo $enderecoCLiente->imprimir();
-
     $funcionario1 = new Funcionario('555555', 'Fernanda', '11353455', '02/10/2003', $enderecoFuncionario, 2222);
+    echo "<br>Funcionário";
     echo $funcionario1->imprimir();
 
-    $cliente = new Cliente('123','Allan','1213','29/02/1999',$enderecoCLiente, 2340);
-    echo $cliente->imprimir();
-
-
-   /*$cliente1 = new Cliente('2353453465436',
-    'Fernanda',
-    '11234545687',
-    '02/10/2003',
-    $enderecoCliente1,
-    'teste',
-    2093);
-
+    $cliente1 = new Cliente('123','Allan','1213','29/02/1999',$enderecoCLiente, 'Fernanda',123);
+    echo "<br><br>Cliente";
     echo $cliente1->imprimir();
-    echo $enderecoCliente1->imprimir();
 
-    echo "<br><br>";*/
+    $livro1 = new Livro('12345','Alice no Pais das Maravilhas','Lewis Carrol',52.32,3);
+    echo "<br><br>Livro";
+    echo $livro1->imprimir();
+
+    $compra1 = new Compra(1,'1111111111',520, $livro1);
+    echo "<br><br>Compra";
+    echo $compra1->imprimir();
+    echo "<br>".$livro1->retornarTitulo();
+    echo "<br>"."Valor: R$ ".$livro1->retornarValor();
+   
+    $reserva1 = new Reserva(1,'31/07/2024','Era uma Vez');
+    echo "<br><br>Reserva";
+    echo $reserva1->imprimir();
+    echo "<br>".$livro1->retornarTitulo();
+
+    echo $cliente1->validarCliente();
 
 
 
