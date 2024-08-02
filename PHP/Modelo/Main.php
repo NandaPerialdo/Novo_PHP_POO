@@ -10,7 +10,23 @@
     require_once('Reserva.php');
     require_once('Pessoa.php');
     require_once('Funcionario.php');
+    require_once('DAO/Conexao.php');
+    require_once('DAO/Inserir.php');
 
+    use PHP\Modelo\DAO\Conexao;//direcionar o arquivo
+    use PHP\Modelo\DAO\Inserir;
+
+    $conexao = new Conexao();
+    $inserir = new Inserir();
+
+    echo $inserir->cadastrarEndereco($conexao,1,'Rua Laranjas',
+    23,'Jardim das Arvores','Sao Bernardo','SP','SP',
+    'Brasil','94326-678');
+
+    echo $inserir->cadastrarCliente($conexao,'123','Fernanda','1213',
+    '29/02/1999',1000,1);
+
+/*
     use Projeto\PHP\Modelo\Pessoa;
     use Projeto\PHP\Modelo\Cliente;
     use Projeto\PHP\Modelo\Endereco;
@@ -51,6 +67,6 @@
 
     echo $cliente1->validarCliente();
 
-
+*/
 
 ?>
