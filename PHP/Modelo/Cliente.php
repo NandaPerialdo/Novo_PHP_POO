@@ -22,17 +22,13 @@
             "<br>Senha: ".$this->senha;
         }
 
-        function validarCliente():string{
+        /*function validarCliente():string{
             if ($login == 'Fernanda' && $senha == 123){
                 return "Usuário Válido";
             }else{
                 return "Usuario Inválido";
             }
-        }//fim do metodo
-
-
-
-
-
-    }//fim do cliente
+        }//fim do metodo*/
+        
+    }//fimD do cliente
 ?>

@@ -2,14 +2,14 @@
     namespace Projeto\PHP\Modelo;//definindo local do projeto
 
     class Reserva{
-        private int $numReserva;
+        private int $codReserva;
         private string $dataReserva;
 
         //metodo construtor
-        function __construct(int $numReserva, 
+        function __construct(int $codReserva, 
         string $dataReserva,
         string $titulo){
-            $this->numReserva = $numReserva;
+            $this->codReserva = $codReserva;
             $this->dataReserva = $dataReserva;
         }
 
@@ -22,12 +22,9 @@
         }//fim do método
 
         public function imprimir():string{
-            return "<br>Numero da Reserva: ".$this->numReserva. 
+            return "<br>Numero da Reserva: ".$this->codReserva. 
             "<br>Data da Reserva: ".$this->dataReserva;
         }//fim do imprimir
-
-
-
      }//fim da classe
 
 ?>

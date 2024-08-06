@@ -12,21 +12,29 @@
     require_once('Funcionario.php');
     require_once('DAO/Conexao.php');
     require_once('DAO/Inserir.php');
+    require_once('DAO/Consultar.php');
+    require_once('DAO/Atualizar.php');
+    require_once('DAO/Excluir.php');
 
     use PHP\Modelo\DAO\Conexao;//direcionar o arquivo
     use PHP\Modelo\DAO\Inserir;
+    use PHP\Modelo\DAO\Consultar;
+    use PHP\Modelo\DAO\Atualizar;
+    use PHP\Modelo\DAO\Excluir;
 
     $conexao = new Conexao();
     $inserir = new Inserir();
+    $consultar = new Consultar();
+    $atualizar = new Atualizar();
+    $excluir = new Excluir();
 
-    echo $inserir->cadastrarEndereco($conexao,1,'Rua Laranjas',
-    23,'Jardim das Arvores','Sao Bernardo','SP','SP',
+    /*echo $inserir->cadastrarEndereco($conexao,3,'Rua doi',
+    23,'Jardim dos numeros','Sao Bernardo','SP','SP',
     'Brasil','94326-678');
 
     echo $inserir->cadastrarCliente($conexao,'123','Fernanda','1213',
-    '29/02/1999',1000,1);
+    '29/02/1999',1000,1);*/
 
-/*
     use Projeto\PHP\Modelo\Pessoa;
     use Projeto\PHP\Modelo\Cliente;
     use Projeto\PHP\Modelo\Endereco;
@@ -65,8 +73,16 @@
     echo $reserva1->imprimir();
     echo "<br>".$livro1->retornarTitulo();
 
-    echo $cliente1->validarCliente();
+    //REFAZER echo $cliente1->validarCliente();
 
+
+/*
+$consultar->consultarIndividual($conexao,'cliente','cpf','123');
+
+$consultar->consultarTudo($conexao,'cliente');
+
+$atualizar->atualizarCliente($conexao,"nome","Claudia","123");
+
+$excluir->excluirCliente($conexao,"123");
 */
-
 ?>
