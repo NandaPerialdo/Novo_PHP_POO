@@ -52,6 +52,25 @@
             }//fim do try catch
         }//fim do metodo
 
+        function consultarLivros(Conexao $conexao,
+        string $nomeTabela){
+            try{
+                $conn = $conexao->conectar();
+                $sql = "select * from $nomeTabela";
+                $result = mysqli_query($conn,$sql);
+
+                while($dados = mysqli_fetch_Array($result)){
+                    echo "<br>Titulo: ".$dados["titulo"].
+                         "<br>Autor: ".$dados["autor"].
+                         "<br>Valor: ".$dados["valor"].
+                         "<br>Quantidade: ".$dados["quantidade"];
+                }//fim do while
+
+            }catch(Except $erro){
+                echo $erro;
+            }//fim do try catch
+        }//fim do metodo
+
     }//fim da classe
 
 

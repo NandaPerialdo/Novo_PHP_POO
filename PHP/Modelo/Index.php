@@ -2,10 +2,17 @@
     namespace Projeto\PHP\Modelo;
 
     require_once('Livro.php');
-    require_once('Main.php');
+    require_once('DAO/Consultar.php');
+    require_once('Cliente.php');
+    require_once('DAO/Conexao.php');
 
     use PHP\Modelo\Livro;
-    use PHP\Modelo\Main;
+    use PHP\Modelo\Cliente;
+    use PHP\Modelo\DAO\Consultar;
+    use PHP\Modelo\DAO\Conexao;
+
+    $consultar = new Consultar();
+    $conexao = new Conexao();
 
 ?>
     <!DOCTYPE html>
@@ -23,9 +30,8 @@
     <h2>Confira nosso Catálogo:</h2>
     
     <?php
-        echo $livro1->imprimir();
+        $consultar->consultarLivros($conexao,'livro');
     ?>
     
-        
     </body>
     </html>
