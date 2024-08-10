@@ -11,18 +11,21 @@
     use Projeto\PHP\Modelo\Heranca\Funcionario;
 
     class Compra{
-        private int $numCompra;
-        private int $numCartao;
-        private float $valorTotal;
+        private int $codCompra;
+        private int $codCartao;
+        private float $valor;
+        private string $dtCompra;
         private Livro $livro;
+       // private $codigo_Usuario;
+       // private $codigo_Livro;
 
         //metodo construtor
-        public function __construct(int $numCompra, int $numCartao, 
-        float $valorTotal, Livro $livro)
+        public function __construct(int $codCompra, int $ncodCartao, 
+        float $valor, Livro $livro)
         {
-            $this->numCompra = $numCompra;
-            $this->numCartao = $numCartao;
-            $this->valorTotal = $valorTotal;
+            $this->codCompra = $codCompra;
+            $this->codCartao = $codCartao;
+            $this->valor = $valor;
             $this->livro = $livro;
         }//fim do construtor
 
@@ -35,9 +38,9 @@
         }//fim do set
 
         public function imprimir():string{
-            return "<br>Numero da Compra: ".$this->numCompra. 
-            "<br>Numero do Cartao: ".$this->numCartao.
-            "<br>Valor Total da Compra: ".$this->valorTotal;
+            return "<br>Numero da Compra: ".$this->codCompra. 
+            "<br>Numero do Cartao: ".$this->codCartao.
+            "<br>Valor Total da Compra: ".$this->valor;
         }//fim do imprimir
 
     }//fim da classe
