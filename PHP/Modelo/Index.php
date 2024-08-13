@@ -6,13 +6,14 @@
     require_once('Cliente.php');
     require_once('DAO/Conexao.php');
 
-    use PHP\Modelo\Livro;
-    use PHP\Modelo\Cliente;
-    use PHP\Modelo\DAO\Consultar;
-    use PHP\Modelo\DAO\Conexao;
+    use Projeto\PHP\Modelo\Livro;
+    use Projeto\PHP\Modelo\Cliente;
+    use Projeto\PHP\Modelo\DAO\Consultar;
+    use Projeto\PHP\Modelo\DAO\Conexao;
 
     $consultar = new Consultar();
     $conexao = new Conexao();
+    $cliente = new Cliente();
 
 ?>
     <!DOCTYPE html>
@@ -31,6 +32,14 @@
     
     <?php
         $consultar->consultarLivros($conexao,'livro');
+        //metodos para exibir o livro
+        $consultar->exibirLivroUm($conexao,'livro');
+        $consultar->exibirLivroDois($conexao,'livro');
+        $consultar->exibirLivroTres($conexao,'livro');
+
+        //$consultar->validarLogin($conexao,'nandaperi');
+       // $consultar->validarSenha($conexao,'123');
+        $consultar->validarGeral($conexao,$consultar->validarLogin($conexao,'nandaperi'),$consultar->validarSenha($conexao,'123'));
     ?>
     
     </body>

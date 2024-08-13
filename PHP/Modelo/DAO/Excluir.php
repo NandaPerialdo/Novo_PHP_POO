@@ -1,7 +1,7 @@
 <?php
-    namespace PHP\Modelo\DAO;
+    namespace Projeto\PHP\Modelo\DAO;
     require_once('Conexao.php');
-    use PHP\Modelo\DAO\Conexao;
+    use Projeto\PHP\Modelo\DAO\Conexao;
 
     class Excluir{
 

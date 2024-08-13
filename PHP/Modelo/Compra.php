@@ -14,7 +14,7 @@
         private int $codCompra;
         private int $codCartao;
         private float $valor;
-        private string $dtCompra;
+        private string $dtCompra;                                           
         private Livro $livro;
        // private $codigo_Usuario;
        // private $codigo_Livro;

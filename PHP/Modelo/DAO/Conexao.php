@@ -1,11 +1,11 @@
 <?php
-    namespace PHP\Modelo\DAO;
+    namespace Projeto\PHP\Modelo\DAO;
 
     class Conexao{
 
         function conectar(){
             try{
-                $conn = mysqli_connect('localhost','root','','phpTI18N');
+                $conn = mysqli_connect('localhost','root','','livrariaEraUmaVez');
                 if($conn){
                     echo "<br>Conectado com Sucesso!";
                     return $conn;

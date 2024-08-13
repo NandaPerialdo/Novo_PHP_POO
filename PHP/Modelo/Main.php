@@ -16,11 +16,11 @@
     require_once('DAO/Atualizar.php');
     require_once('DAO/Excluir.php');
 
-    use PHP\Modelo\DAO\Conexao;//direcionar o arquivo
-    use PHP\Modelo\DAO\Inserir;
-    use PHP\Modelo\DAO\Consultar;
-    use PHP\Modelo\DAO\Atualizar;
-    use PHP\Modelo\DAO\Excluir;
+    use Projeto\PHP\Modelo\DAO\Conexao;//direcionar o arquivo
+    use Projeto\PHP\Modelo\DAO\Inserir;
+    use Projeto\PHP\Modelo\DAO\Consultar;
+    use Projeto\PHP\Modelo\DAO\Atualizar;
+    use Projeto\PHP\Modelo\DAO\Excluir;
 
     $conexao = new Conexao();
     $inserir = new Inserir();

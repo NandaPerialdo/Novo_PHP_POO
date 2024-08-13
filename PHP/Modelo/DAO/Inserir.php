@@ -1,11 +1,11 @@
 <?php
-    namespace PHP\Modelo\DAO;
+    namespace Projeto\PHP\Modelo\DAO;
 
     require_once('Conexao.php');
     require_once('Endereco.php');
 
-    use PHP\Modelo\DAO\Conexao;
-    use PHP\Modelo\Endereco;
+    use Projeto\PHP\Modelo\DAO\Conexao;
+    use Projeto\PHP\Modelo\Endereco;
 
     class Inserir{
        public Conexao $conexao;
