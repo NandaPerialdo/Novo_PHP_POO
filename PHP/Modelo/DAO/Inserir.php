@@ -3,32 +3,37 @@
 
     require_once('Conexao.php');
     require_once('Endereco.php');
+    require_once('Cliente.php');
 
     use Projeto\PHP\Modelo\DAO\Conexao;
     use Projeto\PHP\Modelo\Endereco;
+    use Projeto\PHP\Modelo\Cliente;
 
     class Inserir{
-       public Conexao $conexao;
-       public string $tabela;
-       public string $cpf;
-       public string $nome;
-       public string $telefone;
+        public Conexao $conexao;
+        public int $codUsuario;
+        public string $nome;
+        public string $telefone;
         public string $dtNascimento;
-        public float $totalCompras;
+        public int $codigoEndereco;
+        public string $login;
+        public string $senha;
 
         function cadastrarCliente(
-            Conexao $conexao, 
-            string $cpf, 
+            Conexao $conexao,
+            int $codUsuario, 
             string $nome,
             string $telefone,
             string $dtNascimento,
-            float $totalCompras,
-            int $codEndereco){
+            int $codigoEndereco,
+            string $login,
+            string $senha,
+            ){
             try{
                 $conn = $conexao->conectar();//abri a conexao com o banco
-                $sql = "Insert into cliente 
-                (cpf, nome, telefone,dtNascimento, totalDeCompras, codEndereco)
-                values ('$cpf','$nome','$telefone','$dtNascimento','$totalCompras','$codEndereco')";
+                $sql = "Insert into usuario 
+                (codUsuario, nome, telefone, dtNascimento, codigo_endereco, login, senha)
+                values ('$codUsuario','$nome','$telefone','$dtNascimento','$codigoEndereco','$login','$senha')";
                 $result = mysqli_query($conn, $sql);
 
                 //fechar a conexao
