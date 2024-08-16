@@ -51,11 +51,14 @@
 
     <h2>Procedimento para Cadastrar Usuario<h2>
 
-    <?php
-        $inserir->cadastrarCliente($conexao,5,'Usuario Teste','123214234','02/10/2003',1,'fulano','fulano123');
+    
+    <?php//cadastrar
+        $inserir->cadastrarCliente($conexao,6,'Ana Vitoria','1223334234','02/11/2011',1,'ajulia','aju123');
     ?>
 
     <h2>Procedimento para Comprar<h2>
+
+    
     
     </body>
     </html>

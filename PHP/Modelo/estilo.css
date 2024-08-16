@@ -1,0 +1,359 @@
+/* Estilização dos formulários */
+.form-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 40px 30px;
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #ff4500;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #4682b4;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    background-color: #f0f8ff;
+    transition: border-color 0.3s ease;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus,
+.form-container input[type="email"]:focus {
+    border-color: #ff4500;
+    outline: none;
+}
+
+.form-container button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #4682b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #ff4500;
+    transform: translateY(-2px);
+}
+
+/* Estilização do rodapé */
+footer {
+    background-color: #2f4f4f;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0
+}
+
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.book-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.book-item h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.book-item p {
+    margin: 5px 0;
+}
+
+.book-item .btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.book-item .btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #8e44ad;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #333;
+}
+
+.book-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.book-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+.book-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #8e44ad;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #732d91;
+}
+
+footer {
+    background-color: #8e44ad;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.book-list {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.book-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+}
+
+.book-cover {
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+#carrinho {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px;
+    min-height: 100px;
+}
+
+.carrinho-vazio p {
+    text-align: center;
+    color: #888;
+}
+
+/* Ajustar tamanho da imagem */
+.book-cover {
+    width: 100%; /* Ajusta a imagem para ocupar 100% da largura do container */
+    max-width: 600px; /* Limita a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block;
+    margin: 20px auto; /* Centraliza a imagem horizontalmente */
+}
+
+/* Mudar a fonte do texto */
+body {
+    font-family: 'Times New Roman', serif; /* Muda a fonte do corpo do texto */
+    font-size: 16px; /* Tamanho padrão da fonte */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo para o título */
+header h1 {
+    font-family: 'Georgia', serif; /* Fonte diferente para o título */
+    font-size: 2.5em; /* Aumenta o tamanho do título */
+    text-align: center;
+}
+
+/* Estilo para os links do menu */
+nav a {
+    font-family: 'Arial', sans-serif; /* Muda a fonte dos links de navegação */
+    font-size: 1em;
+    text-decoration: none;
+    color: #444;
+    padding: 10px;
+}
+
+nav a.active {
+    font-weight: bold; /* Destaque para o link ativo */
+    color: #000; /* Cor diferente para o link ativo */
+}
+

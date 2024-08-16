@@ -7,7 +7,7 @@
             try{
                 $conn = mysqli_connect('localhost','root','','livrariaEraUmaVez');
                 if($conn){
-                    echo "<br>Conectado com Sucesso!";
+                    //echo "<br>Conectado com Sucesso!";
                     return $conn;
                 }//fim do if
                 echo "<br>Algo deu errado";
